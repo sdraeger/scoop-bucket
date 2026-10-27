@@ -16,7 +16,7 @@ cat > bucket/ddalab.json <<JSON
 {
   "version": "$version",
   "description": "Delay differential analysis of EEG, iEEG and other multichannel recordings: the ddalab command line",
-  "homepage": "https://github.com/sdraeger/DDALAB",
+  "homepage": "https://ddalab.org/",
   "license": "MIT",
   "architecture": {
     "64bit": {
