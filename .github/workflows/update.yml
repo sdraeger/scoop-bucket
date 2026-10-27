@@ -1,0 +1,29 @@
+name: Update
+
+# Writes bucket/ddalab.json for the latest DDALAB release (pre-releases excluded).
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  manifest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - run: bin/manifest.sh
+
+      - name: Commit a changed manifest
+        run: |
+          git add bucket
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "ddalab $(jq -r .version bucket/ddalab.json)"
+          git push
