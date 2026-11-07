@@ -1,12 +1,12 @@
 {
-  "version": "2.7.2",
+  "version": "2.8.0",
   "description": "Delay differential analysis of EEG, iEEG and other multichannel recordings: the ddalab command line",
   "homepage": "https://ddalab.org/",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/sdraeger/DDALAB/releases/download/v2.7.2/ddalab-x86_64-pc-windows-msvc.zip",
-      "hash": "f2353f4cc4bef1fc95ce41eb98b2174803127cdb0482f47d753db918cfb6d107"
+      "url": "https://github.com/sdraeger/DDALAB/releases/download/v2.8.0/ddalab-x86_64-pc-windows-msvc.zip",
+      "hash": "6f71d3a3f9a035c1c622c510821fb0f196d95694327fac5d3cd9568d2d22e715"
     }
   },
   "bin": "ddalab.exe",
